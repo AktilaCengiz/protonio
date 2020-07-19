@@ -58,8 +58,14 @@ const Proton = require("proton-io") //Proton modülümüzü tanımladık.
 const client = new Discord.Client(); //Botu burda tanımlıyoruz.
 
 //proton ayarlar kısmımız bu kısımda
-let komutKlasör = "./komutlar" //komutların olacağı klasörü seçiniz. Başındaki ./ kısmını kaldırmayınız.
-let eventLoad = "./events" //Eventlar discordda bir olay olduğunda çalışan genel öğelerdir yine bunları ayrı bir dosya olarak alabiliyoruz. Event klasörünüzü değiştirebilirsiniz. Başındaki ./ kısmı kaldırmayınız. 
+let komutKlasör = "./komutlar" 
+//komutların olacağı klasörü seçiniz. 
+//Başındaki ./ kısmını kaldırmayınız.
+let eventLoad = "./events" //Eventlar 
+//Discordda bir olay olduğunda çalışan öğelerdir.
+//yine bunları ayrı bir dosya olarak alabiliyoruz. 
+//Event klasörünüzü değiştirebilirsiniz. 
+//Başındaki ./ kısmı kaldırmayınız. 
 let ownerIDs = ["576117387645026314", "276057718354083860"] // Sahip kısmı iki kişiye kadar destek verir. Bu kısıma geliştirici ID'lerini giriyoruz ve modülde hazır bulunan geliştirici modüllerini bu iki geliştirici kullanabiliyor.
 let owner = true; //Burda geliştirici komutlarının açık mı kapalı mı olacağını yazıyoruz. 
 let defaultCommands = ["ping"]; //Burda modülün kendisinden gelen ping komutunu kullanmak istiyorsanız bu şekilde kullanmak istemiyorsanız [] bu şekilde bırakınız.
@@ -95,8 +101,6 @@ client.login("TOKEN")//Botumuzu giriş yaptırıyoruz.
     <style>
       pre code {
   background-color: #000000;
-  width: 700px;
-  height:400px;
   border: 1px solid #999;
   display: block;
   padding: 20px;
