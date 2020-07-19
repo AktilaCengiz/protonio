@@ -53,43 +53,62 @@ const Proton = require("proton-io") //Proton modülümüzü tanımladık.
 <p>Örnek index.js kısmı:</p>
 <pre>
 <code class="class="javascript hljs"">
-const Discord = <font color="yellow">require</font>("discord.js");<font color="grey">//Discord.JS tanımladık. </font>
+const <font color="blue">Discord</font> = <font color="yellow">require</font>("discord.js");<font color="grey">//Discord.JS tanımladık. </font>
 const Proton = <font color="yellow">require</font>("proton-io");<font color="grey">//Proton modülümüzü tanımladık. </font>
-const client = <font color="green">new</font> Discord.Client();<font color="grey">//Botu burda tanımlıyoruz. </font>
+const client = <font color="green">new</font> <font color="blue">Discord</font>.<font color="green">Client()</font>;<font color="grey">//Botu burda tanımlıyoruz. </font>
 
-//proton ayarlar kısmımız bu kısımda
-let komutKlasör = "./komutlar" 
-//komutların olacağı klasörü seçiniz. 
-//Başındaki ./ kısmını kaldırmayınız.
-let eventLoad = "./events" //Eventlar 
-//Discordda bir olay olduğunda çalışan öğelerdir.
-//yine bunları ayrı bir dosya olarak alabiliyoruz. 
-//Event klasörünüzü değiştirebilirsiniz. 
-//Başındaki ./ kısmı kaldırmayınız. 
-let ownerIDs = ["576117387645026314", "276057718354083860"] // Sahip kısmı iki kişiye kadar destek verir. Bu kısıma geliştirici ID'lerini giriyoruz ve modülde hazır bulunan geliştirici modüllerini bu iki geliştirici kullanabiliyor.
-let owner = true; //Burda geliştirici komutlarının açık mı kapalı mı olacağını yazıyoruz. 
-let defaultCommands = ["ping"]; //Burda modülün kendisinden gelen ping komutunu kullanmak istiyorsanız bu şekilde kullanmak istemiyorsanız [] bu şekilde bırakınız.
+<font color="grey">//proton ayarlar kısmımız bu kısımda</font>
+<font color="blue">let</font> komutKlasör = "./komutlar" 
+<font color="grey">//komutların olacağı klasörü seçiniz.</font>
+<font color="grey">//Başındaki ./ kısmını kaldırmayınız.</font>
+<font color="blue">let</font> eventLoad = "./events" //Eventlar 
+<font color="grey">//Discordda bir olay olduğunda çalışan öğelerdir.</font>
+<font color="grey">//yine bunları ayrı bir dosya olarak alabiliyoruz. </font>
+<font color="grey">//Event klasörünüzü değiştirebilirsiniz. </font>
+<font color="grey">//Başındaki ./ kısmı kaldırmayınız. </font>
+font color="blue">let</font> ownerIDs = ["576117387645026314", "276057718354083860"] 
+<font color="grey">//Sahip kısmı iki kişiye kadar destek verir. </font>
+<font color="grey">//Bu kısıma geliştirici ID'lerini giriyoruz. </font>
+<font color="grey">//Modülde hazır bulunan geliştirici modüllerini</font>
+<font color="grey">//bu iki geliştirici kullanabiliyor.</font>
+font color="blue">let</font> owner = true; 
+<font color="grey">//Burda geliştirici komutlarının</font> 
+<font color="grey">//açık mı kapalı mı olacağını yazıyoruz. </font>
+<font color="blue">let</font> defaultCommands = ["ping"]; 
+<font color="grey">//Burda modülün kendisinden gelen </font>
+<font color="grey">//ping komutunu kullanmak istiyorsanız </font>
+<font color="grey">//bu şekilde </font>
+<font color="grey">//kullanmak istemiyorsanız </font>
+<font color="grey">//[] bu şekilde bırakınız.</font>
 
-//burda ayarlar kısmında belirttiğimiz ayarlarımızı proton modülümüze aktarıyoruz.
-//ilk parametrede client'i aktarıyoruz
-//ikinci parametrede komutlar klasörümüzü aktarıyoruz.
-//üçüncü parametrede ownerlar yani sahipleri aktarıyoruz.
-//dördüncü parametrede owner ve defaultCommands verilerini aktarıyoruz.
-const komutYukle = new proton(client,komutKlasör,eventLoad,ownerIDs,{owner,defaultCommands})
+ <font color="grey">//burda ayarlar kısmında</font>
+ <font color="grey">belirttiğimiz ayarlarımızı proton modülümüze aktarıyoruz.</font>
+ <font color="grey">//ilk parametrede client'i aktarıyoruz.</font>
+<font color="grey">//ikinci parametrede komutlar klasörümüzü aktarıyoruz.</font>
+<font color="grey">//üçüncü parametrede ownerlar yani sahipleri aktarıyoruz.</font>
+<font color="grey">//dördüncü parametrede owner ve defaultCommands verilerini aktarıyoruz.</font>
+<font color="blue">const</font> komutYukle = 
+<font color="green">new</font> proton(client,komutKlasör,eventLoad,ownerIDs,{owner,defaultCommands})
 
-//Proton modülü aynı zamanda mesajlardada bazı ayarlar ve imkanlar size sunuyor bu ayarlarımızıda burda kullanalım:
-let botlaraCevapVer = false;//adındanda anlaşılacağı gibi bu özelliği false yaptığınızda hiçbir botun komutuna tepki vermez.
-let etiketiPrefixOlarakKullan = true; // etiketlediğinizde botunuz prefix olarak kabul eder ve çalışmaya devam eder.
-let etiketlePrefixOgren = true; // etiketlediğinizde botunuz otomatik olarak prefixini söyler.
+<font color="grey">//Proton modülü aynı zamanda mesajlardada </font>
+<font color="grey">//bazı ayarlar ve imkanlar</font>
+<font color="grey">//proton size sunuyor bu ayarlarımızıda burda kullanalım:</font>
+<font color="blue">let</font> botlaraCevapVer = false;//adındanda anlaşılacağı gibi bu özelliği false yaptığınızda hiçbir botun komutuna tepki vermez.
+<font color="blue">let</font> etiketiPrefixOlarakKullan = true; // etiketlediğinizde botunuz prefix olarak kabul eder ve çalışmaya devam eder.
+<font color="blue">let</font> etiketlePrefixOgren = true; // etiketlediğinizde botunuz otomatik olarak prefixini söyler.
 
-//discord.js message eventını çağırıyoruz ve burdan gerekli ayarları proton sayesinde entegre ediyoruz.
-client.on('message', async (msg) => {
-  komutYukle.message(msg,prefix,{botlaraCevapVer,etiketiPrefixOlarakKullan,etiketlePrefixOgren})
+<font color="grey">//discord.js message eventını çağırıyoruz</font>
+<font color="grey">//ve burdan gerekli ayarları </font>
+<font color="grey">//proton sayesinde entegre ediyoruz.</font>
+<font color="blue">client</font>.<font color="yellow">on</font>('message', async (msg) => {
+<font color="blue">komutYukle</font>.message(
+msg,prefix,{botlaraCevapVer,etiketiPrefixOlarakKullan,etiketlePrefixOgren}
+)
 })
 
 
-client.login("TOKEN")//Botumuzu giriş yaptırıyoruz.
-//Token: discord.com/developers kısmındaki token bilginiz.
+<font color="blue">client</font>.<font color="yellow">login</font>("TOKEN")//Botumuzu giriş yaptırıyoruz.
+<font color="gray">//Token: discord.com/developers kısmındaki token bilginiz.</font color="gray">
 </code>
 </pre>
 
