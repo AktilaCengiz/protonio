@@ -45,8 +45,8 @@
 <p>Örnek alt kısımda bulunmaktadır: <p>
 <pre>
 <code class="class="javascript hljs"">
-const Discord = require("discord.js") <font color="grey">//Discord.JS tanımladık.</font>
-const Proton = require("proton-io") //Proton modülümüzü tanımladık.
+<font color="blue">const</font> Discord = require("discord.js") <font color="grey">//Discord.JS tanımladık.</font>
+<font color="blue">const</font> Proton = require("proton-io") //Proton modülümüzü tanımladık.
 </code>
 </pre>
         
@@ -94,11 +94,13 @@ font color="blue">let</font> owner = true;
 <font color="grey">//bazı ayarlar ve imkanlar</font>
 <font color="grey">//proton size sunuyor bu ayarlarımızıda burda kullanalım:</font>
 <font color="blue">let</font> botlaraCevapVer = false;
-<font color="grey">//adındanda anlaşılacağı gibi bu özelliği false yaptığınızda hiçbir botun komutuna tepki vermez.</font>
+<font color="grey">//adındanda anlaşılacağı gibi bu özelliği </font>
+<font color="grey">false yaptığınızda hiçbir botun komutuna tepki vermez.</font>
 <font color="blue">let</font> etiketlePrefixOgren = true; 
 <font color="grey">// etiketlediğinizde botunuz otomatik olarak prefixini söyler.</font>
 <font color="blue">let</font> etiketiPrefixOlarakKullan = true; 
-// etiketlediğinizde botunuz prefix olarak kabul eder ve çalışmaya devam eder.
+<font color="grey">// etiketlediğinizde botunuz prefix olarak kabul eder </font>
+<font color="grey">//ve çalışmaya devam eder.</font>
 
 <font color="grey">//discord.js message eventını çağırıyoruz</font>
 <font color="grey">//ve burdan gerekli ayarları </font>
@@ -110,7 +112,7 @@ msg,prefix,{botlaraCevapVer,etiketiPrefixOlarakKullan,etiketlePrefixOgren}
 })
 
 
-<font color="blue">client</font>.<font color="yellow">login</font>("TOKEN")//Botumuzu giriş yaptırıyoruz.
+<font color="blue">client</font>.<font color="yellow">login</font>("TOKEN")<font color="grey">//Botumuzu giriş yaptırıyoruz.</font>
 <font color="gray">//Token: discord.com/developers kısmındaki token bilginiz.</font color="gray">
 </code>
 </pre>
