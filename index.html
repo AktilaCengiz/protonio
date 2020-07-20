@@ -125,7 +125,18 @@ msg,prefix,{botlaraCevapVer,etiketiPrefixOlarakKullan,etiketlePrefixOgren}
 <h3>Örnek komut yapısı:</h3>
 <pre>
 <code class="class="javascript hljs"">
-//Örnek komut kısmı buraya gelecek.
+<font color="blue">module</font>.<font color="yellow">exports</font> = {
+    <font color="blue">name</font>: "KomutAdı",
+    <font color="blue">aliases</font>: ["alernatif2","alternatif2"],
+    <font color="blue">description</font>: "Komut açıklaması",
+    <font color="blue">usage</font>: "kullanımı",
+    <font color="blue">ownerOnly</font>: false,
+    <font color="gray">//herkese açık mı yöneticilere özel mi?</font>
+    <font color="yellow">run</font>: <font color="blue">async</font> (message,args,client) => {
+   
+   message.channel.send("Bu bir test mesajıdır.")
+    }
+}
 </pre>
     <style>
       pre code {
