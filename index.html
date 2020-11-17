@@ -21,7 +21,6 @@
         <h2>proton-io modülü kolay kullanımlı discord.js v12 için bir komut yükleyici. Aynı zamanda bir komut yükleyiciden çok daha fazlası!</h2>
 
         <section id="downloads">
-          <a href="https://www.venosa.xyz" class="btn"><i class="fas fa-code"></i> Venosa</a>
           <a href="https://www.npmjs.com/package/proton-io" class="btn"><i class="fab fa-npm"></i> Npm sayfası</a>
           <a href="https://github.com/AktilaCengiz/proton-io" class="btn btn-github"><span class="icon"></span>GitHub'da gör</a>
         </section>
@@ -65,21 +64,25 @@ const client = <font color="green">new</font> <font color="blue">Discord</font>.
 <font color="grey">//komutların olacağı klasörü seçiniz.</font>
 <font color="grey">//Başındaki ./ kısmını kaldırmayınız.</font>
 <font color="blue">let</font> eventLoad = "./events" //Eventlar 
-<font color="grey">//Discord'daki event sistemini tetikleyen herhangi birşey yaşandığında çalışan öğelerdir.</font>
-<font color="grey">//yine bu öğeleri ayrı bir dosya olarak alabiliyoruz. </font>
+<font color="grey">//Discord'daki event sistemini tetikleyen herhangi birşey yaşandığında</font>
+<font color="grey">//çalışan öğelerdir.</font>
+<font color="grey">//Bu öğeleri ayrı bir dosya olarak alabiliyoruz. </font>
 <font color="grey">//Event klasörünüzü değiştirebilirsiniz. </font>
 <font color="grey">//Başındaki ./ kısmı kaldırmayınız. </font>
 <font color="blue">let</font> ownerIDs = ["276057718354083860" , "323757986755510275"] 
 <font color="grey">//Sahip kısmı iki kişiye kadar destek verir. </font>
-<font color="grey">//Bu kısıma geliştirici ID'lerini giriyoruz.(Bu kısma güvenilmeyen kişilerin ID'lerini sakın girmeyiniz!) </font>
-<font color="grey">//Modülde hazır bulunan geliştirici komutlarını(eval,reload,restart,fakejoin vb.)</font>
-<font color="grey">//bu iki geliştirici kullanabiliyor.</font>
+<font color="grey">//Bu kısıma geliştirici ID'lerini giriyoruz. </font>
+<font color="grey">//(Bu kısma güvenilmeyen kişilerin ID'lerini sakın girmeyiniz!) </font>
+<font color="grey">//Modülde hazır bulunan geliştirici komutlarını</font>
+<font color="grey">//(eval,reload,restart,fakejoin vb.)</font>
+<font color="grey">//yalnızca bu iki geliştirici kullanabiliyor.</font>
 <font color="blue">let</font> owner = true; 
 <font color="grey">//Burda geliştirici komutlarının</font> 
 <font color="grey">//açık mı kapalı mı olacağını yazıyoruz. </font>
 <font color="blue">let</font> defaultCommands = true; 
 <font color="grey">//Burda modülün kendisinden gelen komutları kullanmak istiyor iseniz </font>
-<font color="grey">//bu kısmı "true" olarak bırakınız, eğer kullanmak istemiyor iseniz "false" olarak değiştiriniz. </font>
+<font color="grey">//bu kısmı "true" olarak bırakınız, eğer kullanmak istemiyor iseniz </font>
+<font color="grey">//"false" olarak değiştiriniz. </font>
 
  
 <font color="blue">const</font> komutYukle = 
@@ -109,7 +112,8 @@ const client = <font color="green">new</font> <font color="blue">Discord</font>.
 <font color="grey">//proton sayesinde entegre ediyoruz.</font>
 <font color="blue">client</font>.<font color="yellow">on</font>('message', async (msg) => {
 <font color="blue">komutYukle</font>.message(
-msg,prefix,{botlaraCevapVer,etiketiPrefixOlarakKullan,etiketlePrefixOgren}
+msg,prefix,{botlaraCevapVer,etiketiPrefixOlarakKullan,
+etiketlePrefixOgren}
 )
 })
 
@@ -152,8 +156,8 @@ msg,prefix,{botlaraCevapVer,etiketiPrefixOlarakKullan,etiketlePrefixOgren}
       
       <footer>
         <hr>
-        <h5>Copyright Github Pages <i class="fas fa-heart"></i> Aktila Cengiz.</h5>
-        <h6>The module is open to all peoples but all rights reserved.</h6>
+        <h5> Aktila Cengiz & flextzius </h5>
+        <h6>Module is avaliable for the people but all rights reserved.</h6>
       </footer>
       
 </html>
