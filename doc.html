@@ -27,6 +27,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/ico.ico" />
+    <script type="module"
+        src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
+
 </head>
 
 <!-- Navbar -->
@@ -216,6 +219,7 @@
                         <h1>Getting Started</h1>
                         <hr style="background-color: white;">
                         Bu kısıma basit bir getting started gelecek
+
                     </section>
 
                     <!-- MongooseProvider Section -->
@@ -279,6 +283,17 @@
                                     <p><strong>Type:</strong> <a target="_blank"
                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object
                                             <i class="fas fa-external-link-alt"></i></a></p>
+
+                                    <deckgo-highlight-code language="javascript">
+                                        <code slot="code">
+//Example!
+.set({
+username:"Aktila",
+id:"579592668208693260",
+level:30
+})
+</code>
+                                    </deckgo-highlight-code>
                                 </section>
                                 <hr style="background-color: white;">
                                 <section id="get">
@@ -290,6 +305,19 @@
                                             <i class="fas fa-external-link-alt"></i></a> , <a
                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Object
                                             <i class="fas fa-external-link-alt"></i></a> </p>
+                                    <deckgo-highlight-code language="javascript">
+                                        <code slot="code">
+//Example!
+.get({id:"579592668208693260"}, "test")
+//return with
+// datas: {
+//      username:"Aktila",
+//      id:"579592668208693260",
+//      level:30  
+//}
+// if not exist return with "test";
+</code>
+                                    </deckgo-highlight-code>
                                 </section>
                                 <hr style="background-color: white;">
                                 <section id="update">
@@ -302,6 +330,13 @@
                                             <i class="fas fa-external-link-alt"></i></a> , <a
                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object
                                             <i class="fas fa-external-link-alt"></i></a> </p>
+                                    <deckgo-highlight-code language="javascript">
+                                        <code slot="code">
+//Example!
+.update({id:"579592668208693260"}, {level: 54})
+//new level is 54!;
+</code>
+                                    </deckgo-highlight-code>
                                 </section>
                                 <hr>
                                 <section id="delete">
@@ -311,12 +346,26 @@
                                     <p><strong>Type(s):</strong> <a target="_blank"
                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object
                                             <i class="fas fa-external-link-alt"></i></a>
+                                        <deckgo-highlight-code language="javascript">
+                                            <code slot="code">
+//Example!
+.delete({id:"579592668208693260"})
+//deleted.
+</code>
+                                        </deckgo-highlight-code>
                                 </section>
                                 <hr>
                                 <section id="getall">
                                     <h5 style="color: #246645;">.getall()</h5>
                                     <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
                                     <p>Fetch all model datas.</p>
+                                    <deckgo-highlight-code language="javascript">
+                                        <code slot="code">
+//Example!
+.getall()
+//All models data return with array.
+</code>
+                                    </deckgo-highlight-code>
                                 </section>
                             </div>
                         </div>
@@ -326,7 +375,7 @@
 
                     <!-- MysqlProvider Section -->
                     <section id="MysqlProvider" style="display:none;">
-                        <h3>MySql Provider</h3>
+                        <h3>MySqlProvider</h3>
                         <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
                         <p>You can easily use your mysql2 database with proton-io using MySql Provider.</p>
                         <br><br>
@@ -384,6 +433,15 @@
                                             <i class="fas fa-external-link-alt"></i></a> , <a target="_blank"
                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object
                                             <i class="fas fa-external-link-alt"></i></a></p>
+                                    <deckgo-highlight-code language="javascript">
+                                        <code slot="code">
+//Example!
+.set("579592668208693260", {
+    level:23,
+    isActive:true
+})
+</code>
+                                    </deckgo-highlight-code>
                                 </section>
                                 <hr style="background-color: white;">
                                 <section id="MySqlGet">
@@ -395,6 +453,17 @@
                                             <i class="fas fa-external-link-alt"></i></a> , <a
                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
                                             <i class="fas fa-external-link-alt"></i></a> </p>
+                                    <deckgo-highlight-code language="javascript">
+                                        <code slot="code">
+//Example!
+.get("579592668208693260","test");
+// return with datas:
+// datas: {
+//    level:23,
+//    isActive:true
+//} if not exist return with "test";
+</code>
+                                    </deckgo-highlight-code>
                                 </section>
                                 <hr style="background-color: white;">
                                 <section id="MySqlUpdate">
@@ -407,6 +476,13 @@
                                             <i class="fas fa-external-link-alt"></i></a> , <a
                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object
                                             <i class="fas fa-external-link-alt"></i></a> </p>
+                                    <deckgo-highlight-code language="javascript">
+                                        <code slot="code">
+//Example!
+.update("579592668208693260",{level: 50});
+// new level is 50!
+</code>
+                                    </deckgo-highlight-code>
                                 </section>
                                 <hr>
                                 <section id="MySqlDelete">
@@ -416,6 +492,13 @@
                                     <p><strong>Type(s):</strong> <a target="_blank"
                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
                                             <i class="fas fa-external-link-alt"></i></a>
+                                        <deckgo-highlight-code language="javascript">
+                                            <code slot="code">
+//Example!
+.delete("579592668208693260");
+// deleted.
+        </code>
+                                        </deckgo-highlight-code>
                                 </section>
                             </div>
                         </div>
@@ -424,7 +507,7 @@
 
                     <!-- SqlProvider Section -->
                     <section id="SqlProvider" style="display:none">
-                        <h3>Sql Provider</h3>
+                        <h3>SqlProvider</h3>
                         <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
                         <p>You can easily use your better-sqlite3 database with proton-io using SqlProvider.
                         </p>
@@ -483,6 +566,15 @@
                                             <i class="fas fa-external-link-alt"></i></a> , <a target="_blank"
                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object
                                             <i class="fas fa-external-link-alt"></i></a></p>
+                                    <deckgo-highlight-code language="javascript">
+                                        <code slot="code">
+//Example!
+.set("579592668208693260", {
+level:23,
+isActive:true
+}) 
+        </code>
+                                    </deckgo-highlight-code>
                                 </section>
                                 <hr style="background-color: white;">
                                 <section id="SqlGet">
@@ -494,6 +586,17 @@
                                             <i class="fas fa-external-link-alt"></i></a> , <a
                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
                                             <i class="fas fa-external-link-alt"></i></a> </p>
+                                    <deckgo-highlight-code language="javascript">
+                                        <code slot="code">
+//Example!
+.get("579592668208693260","test");
+// return with datas:
+// datas: {
+//    level:23,
+//    isActive:true
+//} if not exist return with "test";
+</code>
+                                    </deckgo-highlight-code>
                                 </section>
                                 <hr style="background-color: white;">
                                 <section id="SqlUpdate">
@@ -507,6 +610,13 @@
                                             <i class="fas fa-external-link-alt"></i></a> , <a
                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object
                                             <i class="fas fa-external-link-alt"></i></a> </p>
+                                    <deckgo-highlight-code language="javascript">
+                                        <code slot="code">
+//Example!
+.update("579592668208693260",{level: 50});
+// new level is 50!
+ </code>
+                                    </deckgo-highlight-code>
                                 </section>
                                 <hr>
                                 <section id="SqlDelete">
@@ -516,6 +626,13 @@
                                     <p><strong>Type(s):</strong> <a target="_blank"
                                             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
                                             <i class="fas fa-external-link-alt"></i></a>
+                                        <deckgo-highlight-code language="javascript">
+                                            <code slot="code">
+//Example!
+.delete("579592668208693260");
+ // deleted.
+</code>
+                                        </deckgo-highlight-code>
                                 </section>
 
 
@@ -558,3 +675,5 @@
             document.getElementById('MysqlProvider').style.display = "none";
         }
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
