@@ -148,8 +148,8 @@
                                     </li>
                                     <li><a class="nav-link" style="color:white" href="#ProtonModule">ProtonModule</a>
                                     </li>
-                                    <li><a class="nav-link" style="color:white"
-                                            href="#MongooseProvider">MongooseProvider</a>
+                                    <li><a class="nav-link" style="color:white" href="#MongooseProvider"
+                                            onclick="displayMongooseProvider()">MongooseProvider</a>
                                     </li>
                                     <li><a class="nav-link" style="color:white" href="#MySqlProvider">MySqlProvider</a>
                                     </li>
@@ -203,10 +203,24 @@
                         Bu kısıma basit bir getting started gelecek
                     </section>
 
-
+                    <!-- MongooseProvider Section -->
+                    <section id="MongooseProvider" style="display:hidden;">
+                        <h3>MongooseProvider</h3>
+                        <p>Mongosoe Provider sayesinde mongoose veritabanınızı kolayca proton-io ile birlikte
+                            kullanabilirsiniz.</p>
+                    </section>
 
                 </main>
             </div>
         </section>
 
     </div><!-- container //  -->
+
+
+
+    <script>
+        function displayMongooseProvider() {
+            document.getElementById('getStarted').style.display = "hidden";
+            document.getElementById('MongooseProvider').style.display = "block";
+        };
+    </script>
