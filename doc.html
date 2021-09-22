@@ -86,12 +86,17 @@
     .sidebar .nav-link:hover {
         color: var(--bs-primary);
     }
-
-    #a {
-        color: rgb(49, 145, 145)
-    }
 </style>
 
+<style>
+    a {
+        color: #3789af
+    }
+
+    a:hover {
+        color: #00aeff
+    }
+</style>
 
 <script type="text/javascript">
 
@@ -160,9 +165,11 @@
                                     <li><a class="nav-link" style="color:white" href="#MongooseProvider"
                                             onclick="displayMongooseProvider()">MongooseProvider</a>
                                     </li>
-                                    <li><a class="nav-link" style="color:white" href="#MySqlProvider">MySqlProvider</a>
+                                    <li><a class="nav-link" style="color:white" href="#MySqlProvider"
+                                            onclick="displayMysqlProvider()">MySqlProvider</a>
                                     </li>
-                                    <li><a class="nav-link" style="color:white" href="#SqlProvider">SqlProvider</a>
+                                    <li><a class="nav-link" style="color:white" href="#SqlProvider"
+                                            onclick="displaySqlProvider()"> SqlProvider</a>
                                     </li>
                                 </ul>
                             </li>
@@ -275,7 +282,7 @@
                                 </section>
                                 <hr style="background-color: white;">
                                 <section id="get">
-                                    <h5 style="color: #246645;">.get(data,defaultValue)</h5>
+                                    <h5 style="color: #246645;">.get(data, ?defaultValue)</h5>
                                     <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
                                     <p>data to be get.</p>
                                     <p><strong>Type(s):</strong> <a target="_blank"
@@ -316,22 +323,238 @@
 
                     </section>
 
+
+                    <!-- MysqlProvider Section -->
+                    <section id="MysqlProvider" style="display:none;">
+                        <h3>MySql Provider</h3>
+                        <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                        <p>You can easily use your mysql2 database with proton-io using MySql Provider.</p>
+                        <br><br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <h6>PROPERTIES</h6>
+                                    <hr style="background-color: white;">
+                                    <a href="#proportyConnection">
+                                        <p>connection</p>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg">
+                                    <h6>METHODS</h6>
+                                    <hr style="background-color: white;">
+                                    <a href="#MySqlSet">
+                                        <p>set</p>
+                                    </a>
+                                    <a href="#MySqlGet">
+                                        <p>get</p>
+                                    </a>
+                                    <a href="#MySqlUpdate">
+                                        <p>update</p>
+                                    </a>
+                                    <a href="#MySqlDelete">
+                                        <p>delete</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <h5>PROPERTIES</h5>
+                                <br><br>
+                                <section id="proportyConnection">
+                                    <h5 style="color: #246645;">.connection</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>mysql2 connection</p>
+                                    <p><strong>Type:</strong> <a target="_blank"
+                                            href="https://github.com/sidorares/node-mysql2"> mysql2 connection <i
+                                                class="fas fa-external-link-alt"></i></a></p>
+                                </section>
+                                <hr style="background-color: white;">
+                                <br><br>
+                                <h5>METHODS</h5>
+                                <br><br>
+                                <section id="MySqlSet">
+                                    <h5 style="color: #246645;">.set(id, savedDatas)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>id to be saved</p>
+                                    <p><strong>Type(s):</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a> , <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object
+                                            <i class="fas fa-external-link-alt"></i></a></p>
+                                </section>
+                                <hr style="background-color: white;">
+                                <section id="MySqlGet">
+                                    <h5 style="color: #246645;">.get(id, ?defaultValue)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>id to be get.</p>
+                                    <p><strong>Type(s):</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a> , <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a> </p>
+                                </section>
+                                <hr style="background-color: white;">
+                                <section id="MySqlUpdate">
+                                    <h5 style="color: #246645;">.update(id, updatedDatas)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p> a parameter to find data ordered by string, a parameter to update data ordered
+                                        by map.</p>
+                                    <p><strong>Type(s):</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a> , <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object
+                                            <i class="fas fa-external-link-alt"></i></a> </p>
+                                </section>
+                                <hr>
+                                <section id="MySqlDelete">
+                                    <h5 style="color: #246645;">.delete(id)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p> a parameter to find data ordered by string.</p>
+                                    <p><strong>Type(s):</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!-- SqlProvider Section -->
+                    <section id="SqlProvider" style="display:none">
+                        <h3>Sql Provider</h3>
+                        <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                        <p>You can easily use your better-sqlite3 database with proton-io using SqlProvider.
+                        </p>
+                        <br><br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <h6>PROPERTIES</h6>
+                                    <hr style="background-color: white;">
+                                    <a href="#proportySql">
+                                        <p>sql</p>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg">
+                                    <h6>METHODS</h6>
+                                    <hr style="background-color: white;">
+                                    <a href="#SqlSet">
+                                        <p>set</p>
+                                    </a>
+                                    <a href="#SqlGet">
+                                        <p>get</p>
+                                    </a>
+                                    <a href="#SqlUpdate">
+                                        <p>update</p>
+                                    </a>
+                                    <a href="#SqlDelete">
+                                        <p>delete</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <h5>PROPERTIES</h5>
+                                <br><br>
+                                <section id="proportySql">
+                                    <h5 style="color: #246645;">.sql</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>sql filePath.</p>
+                                    <p><strong>Type:</strong> <a target="_blank"
+                                            href="https://www.npmjs.com/package/better-sqlite3"> sql
+                                            filePath. <i class="fas fa-external-link-alt"></i></a></p>
+                                </section>
+                                <hr style="background-color: white;">
+                                <br><br>
+                                <h5>METHODS</h5>
+                                <br><br>
+                                <section id="SqlSet">
+                                    <h5 style="color: #246645;">.set(id, savedDatas)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>id to be saved</p>
+                                    <p><strong>Type(s):</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a> , <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object
+                                            <i class="fas fa-external-link-alt"></i></a></p>
+                                </section>
+                                <hr style="background-color: white;">
+                                <section id="SqlGet">
+                                    <h5 style="color: #246645;">.get(id, ?defaultValue)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>id to be get.</p>
+                                    <p><strong>Type(s):</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a> , <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a> </p>
+                                </section>
+                                <hr style="background-color: white;">
+                                <section id="SqlUpdate">
+                                    <h5 style="color: #246645;">.update(id, updatedDatas)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p> a parameter to find data ordered by string, a parameter to update
+                                        data ordered
+                                        by map.</p>
+                                    <p><strong>Type(s):</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a> , <a
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object
+                                            <i class="fas fa-external-link-alt"></i></a> </p>
+                                </section>
+                                <hr>
+                                <section id="SqlDelete">
+                                    <h5 style="color: #246645;">.delete(id)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p> a parameter to find data ordered by string.</p>
+                                    <p><strong>Type(s):</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a>
+                                </section>
+
+
+                            </div>
+                        </div>
+                    </section>
+
+
                 </main>
             </div>
-        </section>
-
-    </div><!-- container //  -->
-
+    </div>
+    </section>
 
 
     <script>
         function displayMongooseProvider() {
             document.getElementById('gettingStarted').style.display = "none";
+            document.getElementById('MysqlProvider').style.display = "none";
+            document.getElementById('SqlProvider').style.display = "none";
             document.getElementById('MongooseProvider').style.display = "block";
         };
 
         function displayGettingStarted() {
             document.getElementById('MongooseProvider').style.display = "none";
+            document.getElementById('MysqlProvider').style.display = "none";
+            document.getElementById('SqlProvider').style.display = "none";
             document.getElementById('gettingStarted').style.display = "block";
+        }
+        function displayMysqlProvider() {
+            document.getElementById('MongooseProvider').style.display = "none";
+            document.getElementById('gettingStarted').style.display = "none";
+            document.getElementById('SqlProvider').style.display = "none";
+            document.getElementById('MysqlProvider').style.display = "block";
+        }
+
+        function displaySqlProvider() {
+            document.getElementById('SqlProvider').style.display = "block";
+            document.getElementById('MongooseProvider').style.display = "none";
+            document.getElementById('gettingStarted').style.display = "none";
+            document.getElementById('MysqlProvider').style.display = "none";
         }
     </script>
