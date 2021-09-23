@@ -159,9 +159,11 @@
                                         class="bi small bi-caret-down-fill"></i>
                                 </a>
                                 <ul class="submenu collapse">
-                                    <li><a class="nav-link" style="color:white" href="#ProtonClient">ProtonClient</a>
+                                    <li><a class="nav-link" style="color:white" href="#ProtonClient"
+                                            onclick="displayProtonClient()">ProtonClient</a>
                                     </li>
-                                    <li><a class="nav-link" style="color:white" href="#ProtonHandler">ProtonHandler </a>
+                                    <li><a class="nav-link" style="color:white" href="#ProtonHandler"
+                                            onclick="displayProtonHandler()">ProtonHandler </a>
                                     </li>
                                     <li><a class="nav-link" style="color:white" href="#ProtonModule">ProtonModule</a>
                                     </li>
@@ -640,9 +642,154 @@ isActive:true
                         </div>
                     </section>
 
+                    <!-- ProtonClient -->
+                    <section id="ProtonClient" style="display:none">
+                        <h3>ProtonClient</h3>
+                        <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                        <p>ProtonClient
+                        </p>
 
-                </main>
+                        <h3>Constructor</h3>
+                        <deckgo-highlight-code language="javascript">
+                            <code slot="code">
+new Proton.ProtonClient(options)
+        </code>
+                        </deckgo-highlight-code>
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr align="center">
+                                        <th scope="col">PARAMETER</th>
+                                        <th scope="col">TYPE</th>
+                                        <th scope="col">OPTIONAL</th>
+                                        <th scope="col">DEFAULT</th>
+                                        <th scope="col">DESCRIPTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr align="center">
+                                        <td>Options</td>
+                                        <td><a href="#ProtonClientOptions">ProtonOptions</a></td>
+                                        <td><i class="fas fa-times"></i></td>
+                                        <td>none</td>
+                                        <td>Options for the client.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br><br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <h6>PROPERTIES</h6>
+                                    <hr style="background-color: white;">
+                                    <a href="#proportyOwners">
+                                        <p>owners</p>
+                                    </a>
+                                </div>
+
+                                <div class="col-lg">
+                                    <h6>METHODS</h6>
+                                    <hr style="background-color: white;">
+                                    <a href="#ClinetIsOwner">
+                                        <p>isOwner</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="container">
+                            <div class="row">
+                                <br>
+                                <h5>PROPERTIES</h5>
+                                <br><br>
+                                <section id="proportyOwners">
+                                    <h5 style="color: #246645;">.owners</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p> Owners[] </p>
+                                    <p><strong>Type(s):</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a> or <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array
+                                            <i class="fas fa-external-link-alt"></i></a></p>
+                                </section>
+                                <hr style="background-color: white;">
+                                <br><br>
+                                <h5>METHODS</h5>
+                                <br><br>
+                                <section id="ClinetIsOwner">
+                                    <h5 style="color: #246645;">.isOwner</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>id to check bot admin? </p>
+                                    <p><strong>Type:</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a>
+                                        <deckgo-highlight-code language="javascript">
+                                            <code slot="code">
+//Example!
+.isOwner("id")
+// return with boolean;
+                        </code>
+                                        </deckgo-highlight-code>
+                                        <hr style="background-color: white;">
+                                </section>
+
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <!-- ProtonHandler -->
+                    <section id="ProtonHandler" style="display:none">
+                        <h3>ProtonHandler</h3>
+                        <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                        <p>ProtonHandler</p>
+                        <br><br>
+
+                        <h3>Constructor</h3>
+                        <deckgo-highlight-code language="javascript">
+                            <code slot="code">
+new Proton.ProtonHandler(client, options)
+        </code>
+                        </deckgo-highlight-code>
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr align="center">
+                                        <th scope="col">PARAMETER</th>
+                                        <th scope="col">TYPE</th>
+                                        <th scope="col">OPTIONAL</th>
+                                        <th scope="col">DESCRIPTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr align="center">
+                                        <td>client</td>
+                                        <td><a href="#ProtonClient">ProtonClient</a></td>
+                                        <td><i class="fas fa-times"></i></td>
+                                        <td>client for handler.</td>
+                                    </tr>
+                                    <tr align="center">
+                                        <td>options</td>
+                                        <td><a href="#ProtonClient">ProtonHandlerOptions</a></td>
+                                        <td><i class="fas fa-check"></i></td>
+                                        <td>options for handler.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </section>
+
+
             </div>
+    </div>
+    </section>
+
+    </main>
+    </div>
     </div>
     </section>
 
@@ -653,6 +800,9 @@ isActive:true
             document.getElementById('MysqlProvider').style.display = "none";
             document.getElementById('SqlProvider').style.display = "none";
             document.getElementById('MongooseProvider').style.display = "block";
+            document.getElementById('ProtonClient').style.display = "none";
+            document.getElementById('ProtonHandler').style.display = "none";
+
         };
 
         function displayGettingStarted() {
@@ -660,12 +810,18 @@ isActive:true
             document.getElementById('MysqlProvider').style.display = "none";
             document.getElementById('SqlProvider').style.display = "none";
             document.getElementById('gettingStarted').style.display = "block";
+            document.getElementById('ProtonClient').style.display = "none";
+            document.getElementById('ProtonHandler').style.display = "none";
+
         }
         function displayMysqlProvider() {
             document.getElementById('MongooseProvider').style.display = "none";
             document.getElementById('gettingStarted').style.display = "none";
             document.getElementById('SqlProvider').style.display = "none";
             document.getElementById('MysqlProvider').style.display = "block";
+            document.getElementById('ProtonClient').style.display = "none";
+            document.getElementById('ProtonHandler').style.display = "none";
+
         }
 
         function displaySqlProvider() {
@@ -673,6 +829,28 @@ isActive:true
             document.getElementById('MongooseProvider').style.display = "none";
             document.getElementById('gettingStarted').style.display = "none";
             document.getElementById('MysqlProvider').style.display = "none";
+            document.getElementById('ProtonClient').style.display = "none";
+            document.getElementById('ProtonHandler').style.display = "none";
+
+        }
+        function displayProtonClient() {
+            document.getElementById('SqlProvider').style.display = "none";
+            document.getElementById('MongooseProvider').style.display = "none";
+            document.getElementById('gettingStarted').style.display = "none";
+            document.getElementById('MysqlProvider').style.display = "none";
+            document.getElementById('ProtonClient').style.display = "block";
+            document.getElementById('ProtonHandler').style.display = "none";
+
+        }
+
+        function displayProtonHandler() {
+            document.getElementById('SqlProvider').style.display = "none";
+            document.getElementById('MongooseProvider').style.display = "none";
+            document.getElementById('gettingStarted').style.display = "none";
+            document.getElementById('MysqlProvider').style.display = "none";
+            document.getElementById('ProtonClient').style.display = "none";
+            document.getElementById('ProtonHandler').style.display = "block";
+
         }
     </script>
 
