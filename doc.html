@@ -229,6 +229,34 @@
                         <h3>MongooseProvider</h3>
                         <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
                         <p>You can easily use your mongoose database with proton-io using Mongoose Provider.</p>
+                        <h3>Constructor</h3>
+                        <deckgo-highlight-code language="javascript">
+                            <code slot="code">
+new Proton.MongooseProvider(model)
+        </code>
+                        </deckgo-highlight-code>
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr align="center">
+                                        <th scope="col">PARAMETER</th>
+                                        <th scope="col">TYPE</th>
+                                        <th scope="col">OPTIONAL</th>
+                                        <th scope="col">DEFAULT</th>
+                                        <th scope="col">DESCRIPTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr align="center">
+                                        <td>model</td>
+                                        <td>Mongoose Model</td>
+                                        <td><i class="fas fa-times"></i></td>
+                                        <td>none</td>
+                                        <td>Connection for database.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <br><br>
                         <div class="container">
                             <div class="row">
@@ -265,6 +293,7 @@
                         <div class="container">
                             <div class="row">
                                 <h5>PROPERTIES</h5>
+
                                 <br><br>
                                 <section id="proportyModel">
                                     <h5 style="color: #246645;">.model</h5>
@@ -380,6 +409,34 @@ level:30
                         <h3>MySqlProvider</h3>
                         <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
                         <p>You can easily use your mysql2 database with proton-io using MySql Provider.</p>
+                        <h3>Constructor</h3>
+                        <deckgo-highlight-code language="javascript">
+                            <code slot="code">
+new Proton.MySqlProvider(connection)
+        </code>
+                        </deckgo-highlight-code>
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr align="center">
+                                        <th scope="col">PARAMETER</th>
+                                        <th scope="col">TYPE</th>
+                                        <th scope="col">OPTIONAL</th>
+                                        <th scope="col">DEFAULT</th>
+                                        <th scope="col">DESCRIPTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr align="center">
+                                        <td>connection</td>
+                                        <td>any</td>
+                                        <td><i class="fas fa-times"></i></td>
+                                        <td>none</td>
+                                        <td>Connection for database.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <br><br>
                         <div class="container">
                             <div class="row">
@@ -513,7 +570,36 @@ level:30
                         <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
                         <p>You can easily use your better-sqlite3 database with proton-io using SqlProvider.
                         </p>
+                        <h3>Constructor</h3>
+                        <deckgo-highlight-code language="javascript">
+                            <code slot="code">
+new Proton.SqlProvider(sql)
+        </code>
+                        </deckgo-highlight-code>
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr align="center">
+                                        <th scope="col">PARAMETER</th>
+                                        <th scope="col">TYPE</th>
+                                        <th scope="col">OPTIONAL</th>
+                                        <th scope="col">DEFAULT</th>
+                                        <th scope="col">DESCRIPTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr align="center">
+                                        <td>sql</td>
+                                        <td>any</td>
+                                        <td><i class="fas fa-times"></i></td>
+                                        <td>none</td>
+                                        <td>Connection for database.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                         <br><br>
+
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg">
@@ -745,7 +831,6 @@ new Proton.ProtonClient(options)
                         <h3>ProtonHandler</h3>
                         <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
                         <p>ProtonHandler</p>
-                        <br><br>
 
                         <h3>Constructor</h3>
                         <deckgo-highlight-code language="javascript">
@@ -779,7 +864,51 @@ new Proton.ProtonHandler(client, options)
                                 </tbody>
                             </table>
                         </div>
+                        <br><br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg">
+                                    <h6>PROPERTIES</h6>
+                                    <hr style="background-color: white;">
+                                    <a href="#handlerClient">
+                                        <p>client</p>
+                                    </a>
+                                    <a href="#handlerOptions">
+                                        <p>options</p>
+                                    </a>
+                                </div>
+                                <div class="col-lg">
+                                    <h6>METHODS</h6>
+                                    <hr style="background-color: white;">
+                                    <a href="#handlerRegister">
+                                        <p>register</p>
+                                    </a>
+                                    <a href="#handlerRegister">
+                                        <p>deregister</p>
+                                    </a>
+                                    <a href="#handlerLoad">
+                                        <p>load</p>
+                                    </a>
+                                    <a href="#handlerLoadAll">
+                                        <p>loadAll</p>
+                                    </a>
+                                    <a href="#handlerReload">
+                                        <p>reload</p>
+                                    </a>
+                                    <a href="#handlerReloadAll">
+                                        <p>reloadAll</p>
+                                    </a>
+                                    <a href="#handlerRemove">
+                                        <p>remove</p>
+                                    </a>
+                                    <a href="#handlerRemoveAll">
+                                        <p>removaAll</p>
+                                    </a>
 
+                                </div>
+
+                            </div>
+                        </div>
 
                     </section>
 
