@@ -207,22 +207,52 @@
                             <img class="img-fluid"
                                 src="https://nodei.co/npm/proton-io.png?downloads=true&downloadRank=true&stars=true">
                             <br>
-                            <a href="https://discord.com/invite/D7wkQycz4m"><img class="img-fluid"
+                            <a target="_blank" href="https://discord.com/invite/D7wkQycz4m"><img class="img-fluid"
                                     src="https://img.shields.io/discord/889212790009638962?color=5865F2&logo=discord&logoColor=white"></a>
-                            <a href="https://www.npmjs.com/package/proton-io"><img class="img-fluid"
+                            <a target="_blank" href="https://www.npmjs.com/package/proton-io"><img class="img-fluid"
                                     src="https://img.shields.io/npm/v/proton-io.svg?maxAge=3600"></a>
-                            <a href="https://www.npmjs.com/package/proton-io"><img class="img-fluid"
+                            <a target="_blank" href="https://www.npmjs.com/package/proton-io"><img class="img-fluid"
                                     src="https://img.shields.io/npm/dt/proton-io?maxAge=3600"></a>
-                            <a href="https://patreon.com/venosastudio"><img class="img-fluid"
+                            <a target="_blank" href="https://patreon.com/venosastudio"><img class="img-fluid"
                                     src="https://img.shields.io/badge/donate-patreon-F96854.svg"></a>
                         </center>
 
                         <br><br>
                         <h1>Getting Started</h1>
                         <hr style="background-color: white;">
-                        Bu kısıma basit bir getting started gelecek
+                        <p>proton-io is a powerful bot framework for discord.js(v13).
+                            The package is designed to make developers work freely and easily.</p>
+                        <br>
+                        <p>if you are new proton-io this section for you!</p>
+                        <p>First, you must be install proton-io using this node command:</p>
+                        <deckgo-highlight-code language="javascript">
+                            <code slot="code">
+npm install proton-io
+</code>
+                        </deckgo-highlight-code>
+                        <p>if you are saying how can i use this module? don't panic. we write here some example:</p>
 
+                        <deckgo-highlight-code language="javascript">
+                            <code slot="code">
+const { ProtonClient } = require("proton-io");
+const { Intents } = require("discord.js");
+                            
+class Client extends ProtonClient {
+    super({
+        owners:["Client owner id(s)"],
+        intents: Object.values(Intents.FLAGS).reduce((p, c) => p + c, 0))
+    });
+}
+const client = new Client();
+client.login("YOUR TOKEN HERE");                           
+</code>
+                        </deckgo-highlight-code>
+                        <br>
+                        <h3>if you are look at some more guide codes <a target="_blank"
+                                href="https://github.com/AktilaCengiz/protonio/tree/master/docs/Client">visit here! <i
+                                    class="fas fa-external-link-alt"></i></a></h3>
                     </section>
+
 
                     <!-- MongooseProvider Section -->
                     <section id="MongooseProvider" style="display:none;">
@@ -906,14 +936,57 @@ new Proton.ProtonHandler(client, options)
                                     </a>
 
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <br>
+                                <h5>PROPERTIES</h5>
+                                <br><br>
+                                <section id="handlerClient">
+                                    <h5 style="color: #246645;">.client</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p> ProtonClient </p>
+                                    <p><strong>Type(s):</strong> none</p>
+                                    <hr style="background-color: white;">
+                                    <h5 style="color: #246645;">.options</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p> Some Options for handler </p>
+                                    <p><strong>Type:</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object">Object
+                                            <i class="fas fa-external-link-alt"></i></a></p>
+                                </section>
+                                <hr style="background-color: white;">
+                                <br><br>
+                                <h5>METHODS</h5>
+                                <br><br>
+                                <section id="ClinetIsOwner">
+                                    <h5 style="color: #246645;">.register(mod,filepath)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>It register the module in the cache.</p>
+                                    <p><strong>Type(s):</strong> any, <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a>
+                                        <deckgo-highlight-code language="javascript">
+                                            <code slot="code">
+//Example!
+.isOwner("id")
+// return with boolean;
+                        </code>
+                                        </deckgo-highlight-code>
+                                        <hr style="background-color: white;">
+                                </section>
 
                             </div>
                         </div>
 
                     </section>
 
+        </section>
 
-            </div>
+
+    </div>
     </div>
     </section>
 
