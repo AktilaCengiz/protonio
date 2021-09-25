@@ -913,7 +913,7 @@ new Proton.ProtonHandler(client, options)
                                     <a href="#handlerRegister">
                                         <p>register</p>
                                     </a>
-                                    <a href="#handlerRegister">
+                                    <a href="#handlerDeRegister">
                                         <p>deregister</p>
                                     </a>
                                     <a href="#handlerLoad">
@@ -961,7 +961,7 @@ new Proton.ProtonHandler(client, options)
                                 <br><br>
                                 <h5>METHODS</h5>
                                 <br><br>
-                                <section id="ClinetIsOwner">
+                                <section id="handlerRegister">
                                     <h5 style="color: #246645;">.register(mod,filepath)</h5>
                                     <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
                                     <p>It register the module in the cache.</p>
@@ -971,9 +971,88 @@ new Proton.ProtonHandler(client, options)
                                         <deckgo-highlight-code language="javascript">
                                             <code slot="code">
 //Example!
-.isOwner("id")
-// return with boolean;
+.register(ProtonModule ,"./yourFilePath")
+
                         </code>
+                                        </deckgo-highlight-code>
+                                </section>
+
+                                <section id="handlerDeRegister">
+                                    <hr style="background-color: white;">
+                                    <h5 style="color: #246645;">.deregister(mod,filepath)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>It deregister the module from the cache.</p>
+                                    <p><strong>Type(s):</strong> any, <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a>
+                                        <deckgo-highlight-code language="javascript">
+                                            <code slot="code">
+//Example!
+.deregister(ProtonModule)
+    
+                            </code>
+                                        </deckgo-highlight-code>
+                                </section>
+                                <section id="handlerLoad">
+                                    <hr style="background-color: white;">
+                                    <h5 style="color: #246645;">.load(fileOrFn)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>Loads the module.</p>
+                                    <p><strong>Type(s):</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a> or class
+                                        <deckgo-highlight-code language="javascript">
+                                            <code slot="code">
+//Example!
+.load("filePathOrClass")
+                                    </code>
+                                        </deckgo-highlight-code>
+                                </section>
+
+                                <section id="handlerLoadAll">
+                                    <hr style="background-color: white;">
+                                    <h5 style="color: #246645;">.loadAll()</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>Loads the module.</p>
+                                    <p><strong>Type(s):</strong>
+                                        <deckgo-highlight-code language="javascript">
+                                            <code slot="code">
+//Example!
+.loadAll()
+                                    </code>
+                                        </deckgo-highlight-code>
+                                        <hr style="background-color: white;">
+                                </section>
+                                <section id="handlerLoad">
+                                    <hr style="background-color: white;">
+                                    <h5 style="color: #246645;">.load(fileOrFn)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>Loads the module.</p>
+                                    <p><strong>Type(s):</strong> <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                            <i class="fas fa-external-link-alt"></i></a> or class
+                                        <deckgo-highlight-code language="javascript">
+                                            <code slot="code">
+//Example!
+.load("filePathOrClass")
+                                    </code>
+                                        </deckgo-highlight-code>
+                                </section>
+
+                                <section id="handlerReload">
+                                    <hr style="background-color: white;">
+                                    <h5 style="color: #246645;">.reload(id)</h5>
+                                    <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
+                                    <p>Reloads the module.</p>
+                                    <p><strong>Type(s): <a target="_blank"
+                                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                                <i class="fas fa-external-link-alt"></i></a></strong>
+                                        <deckgo-highlight-code language="javascript">
+                                            <code slot="code">
+//Example!
+//command id
+.reload(id)
+                                    </code>
                                         </deckgo-highlight-code>
                                         <hr style="background-color: white;">
                                 </section>
