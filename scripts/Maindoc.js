@@ -91,7 +91,7 @@ function displayProtonModule() {
     document.getElementById('ProtonModuleOptions').style.display = "none";
 }
 
-function DisplayProtonClientOptions() {
+function displayProtonClientOptions() {
     document.getElementById('ProtonModule').style.display = "none";
     document.getElementById('SqlProvider').style.display = "none";
     document.getElementById('MongooseProvider').style.display = "none";
