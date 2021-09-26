@@ -61,12 +61,17 @@
             </ul>
             <form class="d-flex">
                 <font color="white">
-                    <input style="" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input type="search" class="form-control" id="myInput" placeholder="search something.."
+                        oninput="search()">
+                    <ul id="searchMenu" class="dropdown-menu" style="display: none;">
+                        <div id="searchResults"></div>
+                    </ul>
                 </font>
             </form>
         </div>
     </div>
 </nav>
+<p id="demo"></p>
 
 
 
@@ -1382,5 +1387,6 @@ new Proton.ProtonModule(id, options)
     </div>
     </section>
 
+    <script src="./scripts/Search.js"></script>
     <script src="./scripts/Maindoc.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
