@@ -15,6 +15,9 @@
     <meta name="keywords" content="Discord.JS-commandLoader, Discord.JS command loader, Discord.js">
     <meta name="author" content="Venosa">
 
+    <!-- Style CSS load here -->
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+
     <!-- Bootstrap import -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -29,11 +32,10 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/ico.ico" />
     <script type="module"
         src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"></script>
-
 </head>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="font-family: Nunito; background-color:#246645 ">
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark" style="font-family: Nunito; background-color:#246645 ">
     <div class="container-fluid">
         <a class="navbar-brand" href="./index.html"
             style="padding: 4px; background-color: #278f5b; border-radius: 10px;">proton-io</a>
@@ -76,34 +78,6 @@
 <!-- ======= Icons used for dropdown (you can use your own) ======== -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 
-<style type="text/css">
-    .sidebar li .submenu {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .sidebar .nav-link {
-        font-weight: 500;
-        color: var(--bs-dark);
-    }
-
-    .sidebar .nav-link:hover {
-        color: var(--bs-primary);
-    }
-</style>
-
-<style>
-    a {
-        color: #3789af
-    }
-
-    a:hover {
-        color: #00aeff
-    }
-</style>
 
 <script type="text/javascript">
 
@@ -152,7 +126,7 @@
             <div class="row">
                 <aside class="col-lg-3">
                     <!-- ============= COMPONENT ============== -->
-                    <nav class="sidebar card py-2 mb-4" style="background-color:#246645;">
+                    <nav id="submenu" class="sidebar card py-2 mb-4" style="background-color:#246645;">
                         <ul class="nav flex-column" id="nav_accordion">
                             <li class="nav-item">
                                 <a class="nav-link" style="color:white" href="#gettingStarted"
@@ -793,7 +767,8 @@ new Proton.ProtonClient(options)
                                 <tbody>
                                     <tr align="center">
                                         <td>Options</td>
-                                        <td><a href="#ProtonClientOptions">ProtonOptions</a></td>
+                                        <td><a href="#ProtonClientOptions"
+                                                onclick="DisplayProtonClientOptions()">ProtonClientOptions</a></td>
                                         <td><i class="fas fa-times"></i></td>
                                         <td>none</td>
                                         <td>Options for the client.</td>
@@ -889,7 +864,8 @@ new Proton.ProtonHandler(client, options)
                                 <tbody>
                                     <tr align="center">
                                         <td>client</td>
-                                        <td><a href="#ProtonClient">ProtonClient</a></td>
+                                        <td><a href="#ProtonClient" onclick="displayProtonClient()">ProtonClient</a>
+                                        </td>
                                         <td><i class="fas fa-times"></i></td>
                                         <td>client for handler.</td>
                                     </tr>
@@ -1241,6 +1217,13 @@ new Proton.ProtonModule(id, options)
 
                     <!-- TypeDef ProtonClientOptions -->
                     <section id="ProtonClientOptions" style="display:none">
+                        <h4>ProtonClientOptions <span
+                                style="background-color: rgb(116, 14, 14); color:rgb(253, 253, 253); border-radius: 10px; padding: 5px;">Extends</span>
+                            <a target="_blank" style="color:white; text-decoration: none;" href="https://discord.js.org/#/docs/main/stable/typedef/ClientOptions
+                            ">DiscordClientOptions <i class="fas fa-external-link-alt"> </i></a>
+
+                        </h4>
+                        <br><br>
 
                         <p><strong>Types</strong></p>
                         <ul>
@@ -1261,16 +1244,10 @@ new Proton.ProtonModule(id, options)
                                 </thead>
                                 <tbody>
                                     <tr align="center">
-                                        <td>id</td>
-                                        <td><a href="#ProtonClient">ProtonModule</a></td>
+                                        <td>owners</td>
+                                        <td>String or Array</td>
                                         <td><i class="fas fa-times"></i></td>
-                                        <td>s.</td>
-                                    </tr>
-                                    <tr align="center">
-                                        <td>options</td>
-                                        <td><a href="#ProtonClient">ProtonModuleOptions</a></td>
-                                        <td><i class="fas fa-check"></i></td>
-                                        <td>options for handler.</td>
+                                        <td>Owner or owners for client.</td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -1,0 +1,25 @@
+ a {
+    color: #a6a9aa !important;
+    text-decoration: none !important;
+}   
+
+a:hover {
+    color: #00aeff !important;
+}
+
+.sidebar li .submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: var(--bs-dark);
+}
+
+.sidebar .nav-link:hover {
+    color: var(--bs-primary);
+}
