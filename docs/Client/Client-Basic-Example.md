@@ -10,7 +10,6 @@ class Client extends ProtonClient {
         intents: Object.values(Intents.FLAGS).reduce((p, c) => p + c, 0))
     });
 }
-//deneme arkadaşlar
 const client = new Client();
 
 client.login("YOUR TOKEN HERE");
