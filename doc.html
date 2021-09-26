@@ -165,13 +165,13 @@
                                     <li><a class="nav-link" style="color:rgb(173, 173, 173)" href="#ProtonClientOptions"
                                             onclick="DisplayProtonClientOptions()">ProtonClientOptions</a></li>
                                     <li><a class="nav-link" style="color:rgb(173, 173, 173)"
-                                            href="#ProtonHandlerOptions">ProtonHandlerOptions</a>
+                                            href="#ProtonHandlerOptions"
+                                            onclick="displayProtonHandlerOptions()">ProtonHandlerOptions</a>
                                     </li>
-                                    <li><a class="nav-link" style="color:rgb(173, 173, 173)"
-                                            href="#ProtonModuleOptions">ProtonModuleOptions</a></li>
+                                    <li><a class="nav-link" style="color:rgb(173, 173, 173)" href="#ProtonModuleOptions"
+                                            onclick="displayProtonModuleOptions()">ProtonModuleOptions</a></li>
                                 </ul>
                             </li>
-
                         </ul>
                     </nav>
                 </aside>
@@ -742,7 +742,12 @@ isActive:true
 
                     <!-- ProtonClient -->
                     <section id="ProtonClient" style="display:none">
-                        <h3>ProtonClient</h3>
+                        <h3>ProtonClient <span
+                                style="background-color: rgb(116, 14, 14); color:rgb(253, 253, 253); border-radius: 10px; padding: 5px;">extends</span>
+                            <a target="_blank" style="color:white; text-decoration: none;" href="https://discord.js.org/#/docs/main/stable/class/Client
+                        ">Client <i class=" fas
+                            fa-external-link-alt"> </i></a>
+                        </h3>
                         <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
                         <p>ProtonClient
                         </p>
@@ -841,7 +846,13 @@ new Proton.ProtonClient(options)
 
                     <!-- ProtonHandler -->
                     <section id="ProtonHandler" style="display:none">
-                        <h3>ProtonHandler</h3>
+                        <h3>ProtonHandler <span
+                                style="background-color: rgb(116, 14, 14); color:rgb(253, 253, 253); border-radius: 10px; padding: 5px;">extends</span>
+                            <a target="_blank" style="color:white; text-decoration: none;"
+                                href="https://nodejs.org/api/events.html#events_class_eventemitter">EventEmitter <i
+                                    class=" fas
+                                fa-external-link-alt"> </i></a>
+                        </h3>
                         <span style="float:right; color:#246645"><i class="fas fa-code"></i></span>
                         <p>ProtonHandler</p>
 
@@ -871,7 +882,8 @@ new Proton.ProtonHandler(client, options)
                                     </tr>
                                     <tr align="center">
                                         <td>options</td>
-                                        <td><a href="#ProtonClient">ProtonHandlerOptions</a></td>
+                                        <td><a href="#ProtonHandlerOptions"
+                                                onclick="displayProtonHandlerOptions()">ProtonHandlerOptions</a></td>
                                         <td><i class="fas fa-check"></i></td>
                                         <td>options for handler.</td>
                                     </tr>
@@ -1120,7 +1132,8 @@ new Proton.ProtonModule(id, options)
                                     </tr>
                                     <tr align="center">
                                         <td>options</td>
-                                        <td><a href="#ProtonClient">ProtonModuleOptions</a></td>
+                                        <td><a href="#ProtonModuleOptions"
+                                                onclick="displayProtonModuleOptions()">ProtonModuleOptions</a></td>
                                         <td><i class="fas fa-check"></i></td>
                                         <td>options for handler.</td>
                                     </tr>
@@ -1217,8 +1230,9 @@ new Proton.ProtonModule(id, options)
 
                     <!-- TypeDef ProtonClientOptions -->
                     <section id="ProtonClientOptions" style="display:none">
+                        <br>
                         <h4>ProtonClientOptions <span
-                                style="background-color: rgb(116, 14, 14); color:rgb(253, 253, 253); border-radius: 10px; padding: 5px;">Extends</span>
+                                style="background-color: rgb(116, 14, 14); color:rgb(253, 253, 253); border-radius: 10px; padding: 5px;">extends</span>
                             <a target="_blank" style="color:white; text-decoration: none;" href="https://discord.js.org/#/docs/main/stable/typedef/ClientOptions
                             ">DiscordClientOptions <i class="fas fa-external-link-alt"> </i></a>
 
@@ -1245,9 +1259,109 @@ new Proton.ProtonModule(id, options)
                                 <tbody>
                                     <tr align="center">
                                         <td>owners</td>
-                                        <td>String or Array</td>
+                                        <td><a
+                                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                                <i class="fas fa-external-link-alt"> </i></a>
+                                            or <a
+                                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array
+                                                <i class="fas fa-external-link-alt"> </i></a>
+                                        </td>
                                         <td><i class="fas fa-times"></i></td>
                                         <td>Owner or owners for client.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- TypeDef ProtonHandlerOptions -->
+                    <section id="ProtonHandlerOptions" style="display:none">
+                        <br>
+                        <h4>ProtonHandlerOptions
+                        </h4>
+                        <br><br>
+
+                        <p><strong>Types</strong></p>
+                        <ul>
+                            <li><a
+                                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+                            </li>
+                        </ul>
+
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr align="center">
+                                        <th scope="col">PARAMETER</th>
+                                        <th scope="col">TYPE</th>
+                                        <th scope="col">OPTIONAL</th>
+                                        <th scope="col">DEFAULT</th>
+                                        <th scope="col">DESCRIPTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr align="center">
+                                        <td>directory</td>
+                                        <td><a
+                                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                                <i class="fas fa-external-link-alt"> </i></a>
+                                        </td>
+                                        <td><i class="fas fa-times"></i></td>
+                                        <td>none</td>
+                                        <td>Directory containing modules for the handler.</td>
+                                    </tr>
+                                    <tr align="center">
+                                        <td>automateCategories</td>
+                                        <td><a
+                                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean
+                                                <i class="fas fa-external-link-alt"> </i></a>
+                                        </td>
+                                        <td><i class="fas fa-check"></i></td>
+                                        <td>false</td>
+                                        <td> Whether or not to set each module's category to its parent directory name.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- TypeDef ProtonModuleOptions -->
+                    <section id="ProtonModuleOptions" style="display:none">
+                        <br>
+                        <h4>ProtonModuleOptions
+
+                        </h4>
+                        <br><br>
+
+                        <p><strong>Types</strong></p>
+                        <ul>
+                            <li><a
+                                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+                            </li>
+                        </ul>
+
+                        <div class="table-responsive">
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr align="center">
+                                        <th scope="col">PARAMETER</th>
+                                        <th scope="col">TYPE</th>
+                                        <th scope="col">OPTIONAL</th>
+                                        <th scope="col">DEFAULT</th>
+                                        <th scope="col">DESCRIPTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr align="center">
+                                        <td>category</td>
+                                        <td><a
+                                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String
+                                                <i class="fas fa-external-link-alt"> </i></a>
+                                        </td>
+                                        <td><i class="fas fa-times"></i></td>
+                                        <td>"default"</td>
+                                        <td>Category of the module.</td>
                                     </tr>
                                 </tbody>
                             </table>

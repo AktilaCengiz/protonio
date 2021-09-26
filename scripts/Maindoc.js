@@ -2,22 +2,26 @@ function displayMongooseProvider() {
     document.getElementById('gettingStarted').style.display = "none";
     document.getElementById('MysqlProvider').style.display = "none";
     document.getElementById('SqlProvider').style.display = "none";
+    document.getElementById('ProtonModuleOptions').style.display = "none";
     document.getElementById('MongooseProvider').style.display = "block";
     document.getElementById('ProtonClient').style.display = "none";
     document.getElementById('ProtonClientOptions').style.display = "none";
     document.getElementById('ProtonHandler').style.display = "none";
     document.getElementById('ProtonModule').style.display = "none";
+    document.getElementById('ProtonHandlerOptions').style.display = "none";
 };
 
 function displayGettingStarted() {
     document.getElementById('ProtonModule').style.display = "none";
     document.getElementById('MongooseProvider').style.display = "none";
     document.getElementById('MysqlProvider').style.display = "none";
+    document.getElementById('ProtonModuleOptions').style.display = "none";
     document.getElementById('SqlProvider').style.display = "none";
     document.getElementById('ProtonClientOptions').style.display = "none";
     document.getElementById('gettingStarted').style.display = "block";
     document.getElementById('ProtonClient').style.display = "none";
     document.getElementById('ProtonHandler').style.display = "none";
+    document.getElementById('ProtonHandlerOptions').style.display = "none";
 
 }
 function displayMysqlProvider() {
@@ -28,7 +32,9 @@ function displayMysqlProvider() {
     document.getElementById('ProtonClientOptions').style.display = "none";
     document.getElementById('MysqlProvider').style.display = "block";
     document.getElementById('ProtonClient').style.display = "none";
+    document.getElementById('ProtonModuleOptions').style.display = "none";
     document.getElementById('ProtonHandler').style.display = "none";
+    document.getElementById('ProtonHandlerOptions').style.display = "none";
 
 }
 
@@ -41,6 +47,8 @@ function displaySqlProvider() {
     document.getElementById('ProtonClient').style.display = "none";
     document.getElementById('ProtonClientOptions').style.display = "none";
     document.getElementById('ProtonHandler').style.display = "none";
+    document.getElementById('ProtonModuleOptions').style.display = "none";
+    document.getElementById('ProtonHandlerOptions').style.display = "none";
 
 }
 function displayProtonClient() {
@@ -52,6 +60,8 @@ function displayProtonClient() {
     document.getElementById('ProtonClient').style.display = "block";
     document.getElementById('ProtonClientOptions').style.display = "none";
     document.getElementById('ProtonHandler').style.display = "none";
+    document.getElementById('ProtonHandlerOptions').style.display = "none";
+    document.getElementById('ProtonModuleOptions').style.display = "none";
 
 }
 
@@ -64,7 +74,8 @@ function displayProtonHandler() {
     document.getElementById('ProtonClient').style.display = "none";
     document.getElementById('ProtonHandler').style.display = "block";
     document.getElementById('ProtonClientOptions').style.display = "none";
-
+    document.getElementById('ProtonHandlerOptions').style.display = "none";
+    document.getElementById('ProtonModuleOptions').style.display = "none";
 }
 
 function displayProtonModule() {
@@ -76,6 +87,8 @@ function displayProtonModule() {
     document.getElementById('ProtonClient').style.display = "none";
     document.getElementById('ProtonHandler').style.display = "none";
     document.getElementById('ProtonClientOptions').style.display = "none";
+    document.getElementById('ProtonHandlerOptions').style.display = "none";
+    document.getElementById('ProtonModuleOptions').style.display = "none";
 }
 
 function DisplayProtonClientOptions() {
@@ -87,4 +100,33 @@ function DisplayProtonClientOptions() {
     document.getElementById('ProtonClient').style.display = "none";
     document.getElementById('ProtonHandler').style.display = "none";
     document.getElementById('ProtonClientOptions').style.display = "block";
+    document.getElementById('ProtonHandlerOptions').style.display = "none";
+    document.getElementById('ProtonModuleOptions').style.display = "none";
+}
+
+function displayProtonHandlerOptions() {
+    document.getElementById('ProtonModule').style.display = "none";
+    document.getElementById('SqlProvider').style.display = "none";
+    document.getElementById('MongooseProvider').style.display = "none";
+    document.getElementById('gettingStarted').style.display = "none";
+    document.getElementById('MysqlProvider').style.display = "none";
+    document.getElementById('ProtonClient').style.display = "none";
+    document.getElementById('ProtonHandler').style.display = "none";
+    document.getElementById('ProtonClientOptions').style.display = "none";
+    document.getElementById('ProtonHandlerOptions').style.display = "block";
+    document.getElementById('ProtonModuleOptions').style.display = "none";
+}
+
+function displayProtonModuleOptions() {
+    document.getElementById('ProtonModule').style.display = "none";
+    document.getElementById('SqlProvider').style.display = "none";
+    document.getElementById('MongooseProvider').style.display = "none";
+    document.getElementById('gettingStarted').style.display = "none";
+    document.getElementById('MysqlProvider').style.display = "none";
+    document.getElementById('ProtonClient').style.display = "none";
+    document.getElementById('ProtonHandler').style.display = "none";
+    document.getElementById('ProtonClientOptions').style.display = "none";
+    document.getElementById('ProtonHandlerOptions').style.display = "none";
+    document.getElementById('ProtonModuleOptions').style.display = "block";
+
 }
