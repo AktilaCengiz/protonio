@@ -35,6 +35,37 @@
 
 </head>
 
+
+<!-- PreLoader -->
+<div id="dx">
+    <div id="preloader"></div>
+</div>
+
+
+<style>
+    #preloader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        overflow: visible;
+        background: url('../images/preLoader.gif') no-repeat center center;
+    }
+
+    #dx {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        overflow: visible;
+        background-color: rgb(14, 13, 13);
+    }
+
+    #content {
+        display: none;
+    }
+</style>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark" style="font-family: Nunito; background-color:#246645 ">
     <div class="container-fluid">
