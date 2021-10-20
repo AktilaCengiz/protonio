@@ -4,8 +4,8 @@ Firstly before we start learn, we will learn our events!
 
 We have 4 different handler events on Proton-io. These and their explanations are given below:
 - **commandNotFound:** if you are looking for unknown command event this event usable for you.
-- **commandStarted:** Command Load starting event.
-- **commandFinished:** Command Load finished event.
+- **commandStarted:** Command use starting event.
+- **commandFinished:** Command use finished event.
 - **error:** if this event run some probably contain error your code.
 
 we actually learned our command-handler-events but how can we use this events?
